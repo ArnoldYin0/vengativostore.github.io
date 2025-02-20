@@ -4,64 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vengativo Store - Soluciones Digitales</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            font-family: 'Inter', sans-serif;
         }
-        header {
-            background-color: #f4f4f4;
-            padding: 20px;
-            text-align: center;
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
         }
-        .contact-info {
-            background-color: #f9f9f9;
-            padding: 15px;
-            margin-top: 20px;
+        .floating-image {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Vengativo Store</h1>
-        <p>Soluciones Digitales e Innovación Tecnológica</p>
-    </header>
+<body class="bg-gray-50">
+    <div class="hero-bg text-white">
+        <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Vengativo Store</h1>
+                <p class="text-xl mb-6 opacity-0 animate-fade-in animation-delay-500">Soluciones Digitales e Innovación Tecnológica</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">Comenzar</a>
+                    <a href="#" class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">Más Información</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 floating-image">
+                <img src="/api/placeholder/500/600" alt="Vengativo Store" class="w-full h-auto rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <h2>Quiénes Somos</h2>
-            <p>Somos una empresa dedicada al desarrollo de soluciones tecnológicas innovadoras, con especial énfasis en aplicaciones de comunicación y servicios digitales.</p>
-        </section>
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-4 gap-6 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-blue-600">41535</h3>
+                <p class="text-gray-600">Clientes únicos</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-blue-600">261904</h3>
+                <p class="text-gray-600">Ventas totales</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-blue-600">202522</h3>
+                <p class="text-gray-600">Regalos enviados</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-blue-600">59382</h3>
+                <p class="text-gray-600">Recargas realizadas</p>
+            </div>
+        </div>
+    </div>
 
-        <section class="contact-info">
-            <h2>Información de Contacto</h2>
-            <p>Dirección: Av. Tecnología 123, Oficina 456</p>
-            <p>Correo Electrónico: contacto@vengativostore.com</p>
-            <p>Teléfono: +56 9 1234 5678</p>
-        </section>
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">Desarrollo Web</h3>
+                <p>Creamos sitios web modernos y responsive</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">Aplicaciones Móviles</h3>
+                <p>Soluciones digitales para iOS y Android</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">Consultoría Tech</h3>
+                <p>Asesoramiento estratégico en tecnología</p>
+            </div>
+        </div>
+    </div>
 
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Desarrollo de Aplicaciones Móviles</li>
-                <li>Soluciones de Comunicación Digital</li>
-                <li>Consultoría Tecnológica</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Información Legal</h2>
-            <p>Vengativo Store SpA - RUT: XX.XXX.XXX-X</p>
-            <p>Registro de Comercio: En trámite</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Vengativo Store. Todos los derechos reservados.</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Vengativo Store. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script>
+        // Simple animations with GSAP
+        gsap.from(".animate-fade-in", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2
+        });
+    </script>
 </body>
 </html>
