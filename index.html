@@ -12,7 +12,7 @@
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #4A0E4E 0%, #7E3F8F 100%);
         }
         .floating-image {
             animation: float 4s ease-in-out infinite;
@@ -22,77 +22,141 @@
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0px); }
         }
+        .bg-purple-gradient {
+            background: linear-gradient(135deg, #5D3FD3 0%, #9D4EDD 100%);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="hero-bg text-white">
+    <!-- Header -->
+    <header class="bg-black text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="logo">
+                <!-- Placeholder for logo - replace with your logo -->
+                <img src="/api/placeholder/150/50" alt="Vengativo Store Logo" class="h-10">
+            </div>
+            <nav class="flex space-x-4">
+                <a href="#" class="hover:text-purple-300">Inicio</a>
+                <a href="#" class="hover:text-purple-300">Servicios</a>
+                <a href="#" class="hover:text-purple-300">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 text-left">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Vengativo Store</h1>
-                <p class="text-xl mb-6 opacity-0 animate-fade-in animation-delay-500">Soluciones Digitales e Innovación Tecnológica</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Vengativo Store</h1>
+                <p class="text-xl mb-6">Ofrecemos soluciones digitales innovadoras con los precios más competitivos del mercado.</p>
                 <div class="flex space-x-4">
-                    <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">Comenzar</a>
-                    <a href="#" class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">Más Información</a>
+                    <a href="#" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Comenzar</a>
+                    <a href="#" class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition">Más Información</a>
                 </div>
             </div>
             <div class="md:w-1/2 mt-8 md:mt-0 floating-image">
+                <!-- Placeholder for hero image - replace with your image -->
                 <img src="/api/placeholder/500/600" alt="Vengativo Store" class="w-full h-auto rounded-lg shadow-2xl">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container mx-auto px-4 py-16">
+    <!-- Estadísticas -->
+    <section class="container mx-auto px-4 py-16">
         <div class="grid md:grid-cols-4 gap-6 text-center">
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-blue-600">41535</h3>
+                <h3 class="text-3xl font-bold text-purple-600">41,537</h3>
                 <p class="text-gray-600">Clientes únicos</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-blue-600">261904</h3>
+                <h3 class="text-3xl font-bold text-purple-600">261,904</h3>
                 <p class="text-gray-600">Ventas totales</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-blue-600">202522</h3>
-                <p class="text-gray-600">Regalos enviados</p>
+                <h3 class="text-3xl font-bold text-purple-600">202,522</h3>
+                <p class="text-gray-600">Proyectos completados</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-blue-600">59382</h3>
-                <p class="text-gray-600">Recargas realizadas</p>
+                <h3 class="text-3xl font-bold text-purple-600">59,382</h3>
+                <p class="text-gray-600">Clientes satisfechos</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold mb-4">Desarrollo Web</h3>
-                <p>Creamos sitios web modernos y responsive</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold mb-4">Aplicaciones Móviles</h3>
-                <p>Soluciones digitales para iOS y Android</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold mb-4">Consultoría Tech</h3>
-                <p>Asesoramiento estratégico en tecnología</p>
+    <!-- Métodos de Entrega -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Elige tu método</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <h3 class="text-xl font-semibold mb-4">Consultoría Digital</h3>
+                    <p>Asesoramiento personalizado para tu negocio</p>
+                    <a href="#" class="mt-4 inline-block text-purple-600 hover:underline">Saber más</a>
+                </div>
+                <div class="bg-purple-gradient text-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <h3 class="text-xl font-semibold mb-4">Desarrollo Web</h3>
+                    <p>Soluciones web a medida y responsivas</p>
+                    <a href="#" class="mt-4 inline-block text-white hover:underline">Comenzar proyecto</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <h3 class="text-xl font-semibold mb-4">Aplicaciones Móviles</h3>
+                    <p>Desarrollo de apps para iOS y Android</p>
+                    <a href="#" class="mt-4 inline-block text-purple-600 hover:underline">Ver servicios</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Vengativo Store. Todos los derechos reservados.</p>
+    <!-- Métodos de Pago -->
+    <section class="container mx-auto px-4 py-16 text-center">
+        <h2 class="text-3xl font-bold mb-8">Métodos de Pago</h2>
+        <div class="flex justify-center space-x-8 items-center">
+            <img src="/api/placeholder/100/50" alt="Visa" class="h-12">
+            <img src="/api/placeholder/100/50" alt="Mastercard" class="h-12">
+            <img src="/api/placeholder/100/50" alt="PayPal" class="h-12">
+            <img src="/api/placeholder/100/50" alt="Crypto" class="h-12">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Vengativo Store</h4>
+                    <p>Soluciones digitales innovadoras para tu negocio</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
+                    <p>Email: contacto@vengativostore.com</p>
+                    <p>Teléfono: +56 9 1234 5678</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-purple-400 hover:text-purple-200">Discord</a>
+                        <a href="#" class="text-purple-400 hover:text-purple-200">Instagram</a>
+                        <a href="#" class="text-purple-400 hover:text-purple-200">Twitter</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Legal</h4>
+                    <a href="#" class="block text-purple-400 hover:text-purple-200">Términos de Servicio</a>
+                    <a href="#" class="block text-purple-400 hover:text-purple-200">Política de Privacidad</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-4 border-t border-gray-800 text-center">
+                <p>&copy; 2024 Vengativo Store. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
     <script>
         // Simple animations with GSAP
-        gsap.from(".animate-fade-in", {
+        gsap.from(".floating-image", {
             opacity: 0,
             y: 50,
-            duration: 1,
-            stagger: 0.2
+            duration: 1
         });
     </script>
 </body>
