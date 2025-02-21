@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vengativo Store - Fortnite</title>
+    <title>Vengativo Store - Compra Skins</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
@@ -11,53 +11,44 @@
             color: white;
             font-family: 'Inter', sans-serif;
         }
-        .hero-section {
-            background: linear-gradient(180deg, rgba(14, 14, 26, 0.8) 0%, rgba(14, 14, 26, 0.8) 100%);
-        }
-        .stats-card {
-            background: rgba(43, 43, 68, 0.5);
-            border-radius: 16px;
-        }
-        .purchase-method {
-            background: rgba(43, 43, 68, 0.5);
-            border-radius: 16px;
-            transition: transform 0.3s ease;
-        }
-        .purchase-method:hover {
-            transform: scale(1.05);
-        }
-        .purchase-method-active {
-            background: linear-gradient(135deg, #5D3FD3 0%, #8A4FFF 100%);
-        }
         .logo {
-        width: 250px;
-        height: auto;
+            width: 250px;
+            height: auto;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        .nav-link {
+            color: #a855f7;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #d8b4fe;
         }
     </style>
 </head>
 <body>
     <div class="container mx-auto px-4">
-        <!-- Navegación -->
-        <nav class="flex justify-between items-center py-6">
+        <nav class="nav-container">
+            <a href="#" class="nav-link">INICIO</a>
+            <a href="#" class="nav-link">CLUB</a>
             <img src="Logo_VS.png" alt="Vengativo Store Logo" class="logo">
-            <div class="space-x-6">
-                <a href="#" class="text-purple-300 hover:text-purple-500">Inicio</a>
-                <a href="#" class="text-purple-300 hover:text-purple-500">Club</a>
-                <a href="#" class="text-purple-300 hover:text-purple-500">Skins</a>
-                <a href="#" class="text-purple-300 hover:text-purple-500">Contacto</a>
-            </div>
+            <a href="#" class="nav-link">SKINS</a>
+            <a href="#" class="nav-link">CONTACTO</a>
         </nav>
 
-        <!-- Sección Hero -->
-        <div class="hero-section flex items-center py-16">
-            <div class="w-1/2 pr-10">
-                <h1 class="text-5xl font-bold mb-6">Compra Skins</h1>
-                <p class="text-xl mb-8">Ofrecemos los precios más baratos, recíbe tus compras de manera super rapida, sin dar tus datos de inicio.</p>
-                <div class="space-x-4">
-                    <a href="#" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">Comenzar</a>
-                    <a href="#" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black">Más Información</a>
-                </div>
+        <div class="hero-section text-center mt-8">
+            <h1 class="text-5xl font-bold mb-4">Compra Skins</h1>
+            <p class="text-xl mb-6">Ofrecemos los precios más baratos, recibe tus compras de manera super rapida, sin dar tus datos de inicio.</p>
+            <div class="space-x-4">
+                <a href="#" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">Comenzar</a>
+                <a href="#" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black">Más Información</a>
             </div>
+        </div>
             <div class="w-1/2">
                 <img src="/api/placeholder/400/600" alt="Fortnite Character" class="w-full rounded-lg">
             </div>
