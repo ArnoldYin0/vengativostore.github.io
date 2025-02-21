@@ -3,164 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vengativo Store - Fortnite Skins y Pavos</title>
+    <title>Vengativo Store - Compra Pavos</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body {
+            background-color: #0E0E1A;
+            color: white;
             font-family: 'Inter', sans-serif;
-            background-color: #1a1a2e;
-            color: #ffffff;
         }
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(45,45,75,0.9) 100%);
-            background-size: cover;
-            background-position: center;
+        .hero-section {
+            background: linear-gradient(180deg, rgba(14, 14, 26, 0.8) 0%, rgba(14, 14, 26, 0.8) 100%);
         }
-        .floating-image {
-            animation: float 4s ease-in-out infinite;
+        .stats-card {
+            background: rgba(43, 43, 68, 0.5);
+            border-radius: 16px;
         }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        .purchase-method {
+            background: rgba(43, 43, 68, 0.5);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
         }
-        .bg-fortnite-gradient {
+        .purchase-method:hover {
+            transform: scale(1.05);
+        }
+        .purchase-method-active {
             background: linear-gradient(135deg, #5D3FD3 0%, #8A4FFF 100%);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="bg-black text-white py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="logo">
-                <img src="/api/placeholder/100/50" alt="Vengativo Store Logo" class="h-10">
+    <div class="container mx-auto px-4">
+        <!-- Navegación -->
+        <nav class="flex justify-between items-center py-6">
+            <img src="/api/placeholder/200/50" alt="Vengativo Store Logo" class="h-10">
+            <div class="space-x-6">
+                <a href="#" class="text-purple-300 hover:text-purple-500">Inicio</a>
+                <a href="#" class="text-purple-300 hover:text-purple-500">Pavos</a>
+                <a href="#" class="text-purple-300 hover:text-purple-500">Skins</a>
+                <a href="#" class="text-purple-300 hover:text-purple-500">Contacto</a>
             </div>
-            <nav class="flex space-x-4">
-                <a href="#" class="hover:text-purple-300">Inicio</a>
-                <a href="#" class="hover:text-purple-300">Pavos</a>
-                <a href="#" class="hover:text-purple-300">Skins</a>
-                <a href="#" class="hover:text-purple-300">Contacto</a>
-            </nav>
-        </div>
-    </header>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg text-white">
-        <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 text-left">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Compra Pavos</h1>
-                <p class="text-xl mb-6">Ofrecemos los precios más baratos, recibí tus compras de manera automatizada, sin dar tus datos de inicio.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Comenzar</a>
-                    <a href="#" class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition">Más Información</a>
+        <!-- Sección Hero -->
+        <div class="hero-section flex items-center py-16">
+            <div class="w-1/2 pr-10">
+                <h1 class="text-5xl font-bold mb-6">Compra Pavos</h1>
+                <p class="text-xl mb-8">Ofrecemos los precios más baratos, recibí tus compras de manera automatizada, sin dar tus datos de inicio.</p>
+                <div class="space-x-4">
+                    <a href="#" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">Comenzar</a>
+                    <a href="#" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black">Más Información</a>
                 </div>
             </div>
-            <div class="md:w-1/2 mt-8 md:mt-0 floating-image">
-                <img src="/api/placeholder/400/600" alt="Fortnite Character" class="w-full h-auto rounded-lg shadow-2xl">
+            <div class="w-1/2">
+                <img src="/api/placeholder/400/600" alt="Fortnite Character" class="w-full rounded-lg">
             </div>
         </div>
-    </section>
 
-    <!-- Estadísticas -->
-    <section class="container mx-auto px-4 py-16">
-        <div class="grid md:grid-cols-4 gap-6 text-center">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-purple-400">41,537</h3>
+        <!-- Estadísticas -->
+        <div class="grid grid-cols-4 gap-6 my-16">
+            <div class="stats-card p-6 text-center">
+                <h2 class="text-3xl font-bold text-purple-400">41,537</h2>
                 <p class="text-gray-300">Clientes únicos</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-purple-400">261,904</h3>
+            <div class="stats-card p-6 text-center">
+                <h2 class="text-3xl font-bold text-purple-400">261,904</h2>
                 <p class="text-gray-300">Ventas totales</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-purple-400">202,522</h3>
+            <div class="stats-card p-6 text-center">
+                <h2 class="text-3xl font-bold text-purple-400">202,522</h2>
                 <p class="text-gray-300">Pavos vendidos</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold text-purple-400">59,382</h3>
+            <div class="stats-card p-6 text-center">
+                <h2 class="text-3xl font-bold text-purple-400">59,382</h2>
                 <p class="text-gray-300">Skins entregadas</p>
             </div>
         </div>
-    </section>
 
-    <!-- Métodos de Entrega -->
-    <section class="bg-gray-900 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Elige tu método de compra</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Recarga en cuenta</h3>
-                    <p class="text-gray-300">Recibe los pavos directamente en tu cuenta de Fortnite</p>
-                    <a href="#" class="mt-4 inline-block text-purple-300 hover:underline">WhatsApp</a>
-                </div>
-                <div class="bg-fortnite-gradient text-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <h3 class="text-xl font-semibold mb-4">Compra con tarjeta</h3>
-                    <p>Recibe pavos mediante regalo en el juego</p>
-                    <a href="#" class="mt-4 inline-block text-white hover:underline">Comenzar</a>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Compra con crypto</h3>
-                    <p class="text-gray-300">Paga con criptomonedas y recibe tu regalo</p>
-                    <a href="#" class="mt-4 inline-block text-purple-300 hover:underline">Discord</a>
-                </div>
+        <!-- Métodos de Compra -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">Elige tu método de compra</h2>
+        </div>
+        <div class="grid grid-cols-3 gap-6 mb-16">
+            <div class="purchase-method p-6">
+                <h3 class="text-xl mb-4">Recarga en cuenta</h3>
+                <p class="mb-4">Recibe los pavos directamente en tu cuenta de Fortnite</p>
+                <a href="#" class="text-purple-300">WhatsApp</a>
+            </div>
+            <div class="purchase-method purchase-method-active p-6">
+                <h3 class="text-xl mb-4">Compra con tarjeta</h3>
+                <p class="mb-4">Recibe pavos mediante regalo en el juego</p>
+                <a href="#" class="text-white">Comenzar</a>
+            </div>
+            <div class="purchase-method p-6">
+                <h3 class="text-xl mb-4">Compra con crypto</h3>
+                <p class="mb-4">Paga con criptomonedas y recibe tu regalo</p>
+                <a href="#" class="text-purple-300">Discord</a>
             </div>
         </div>
-    </section>
 
-    <!-- Métodos de Pago -->
-    <section class="container mx-auto px-4 py-16 text-center">
-        <h2 class="text-3xl font-bold mb-8 text-white">Métodos de Pago</h2>
-        <div class="flex justify-center space-x-8 items-center">
+        <!-- Métodos de Pago -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">Métodos de Pago</h2>
+        </div>
+        <div class="flex justify-center space-x-8 mb-16">
             <img src="/api/placeholder/100/50" alt="Visa" class="h-12">
             <img src="/api/placeholder/100/50" alt="Mastercard" class="h-12">
             <img src="/api/placeholder/100/50" alt="PayPal" class="h-12">
             <img src="/api/placeholder/100/50" alt="Crypto" class="h-12">
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Vengativo Store</h4>
-                    <p>Especialistas en venta de pavos y skins de Fortnite</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
-                    <p>Email: soporte@vengativostore.com</p>
-                    <p>WhatsApp: +56 9 1234 5678</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Síguenos</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-purple-400 hover:text-purple-200">Discord</a>
-                        <a href="#" class="text-purple-400 hover:text-purple-200">Instagram</a>
-                        <a href="#" class="text-purple-400 hover:text-purple-200">WhatsApp</a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Legal</h4>
-                    <a href="#" class="block text-purple-400 hover:text-purple-200">Términos de Servicio</a>
-                    <a href="#" class="block text-purple-400 hover:text-purple-200">Política de Privacidad</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-4 border-t border-gray-800 text-center">
-                <p>&copy; 2024 Vengativo Store. No afiliado a Epic Games.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Simple animations with GSAP
-        gsap.from(".floating-image", {
-            opacity: 0,
-            y: 50,
-            duration: 1
-        });
-    </script>
+    </div>
 </body>
 </html>
